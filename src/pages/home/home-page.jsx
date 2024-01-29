@@ -1,9 +1,10 @@
 import React from 'react';
+import HomeTemplates from "../../templates/home/home-templates";
 
 const HomePage = () => {
     return (
         <div>
-            Homepage
+            <HomeTemplates/>
         </div>
     );
 };

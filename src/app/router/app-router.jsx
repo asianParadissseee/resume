@@ -1,13 +1,13 @@
 import {Route, Routes} from "react-router-dom";
-import HomePage from "../../pages/home/home-page";
 import {Suspense} from "react";
+import {HomePageAsync} from "../../pages/home/home-page.async";
 
 const AppRouter = () => {
 
     const configRouter = [
         {
             path: "/",
-            element: <HomePage/>
+            element: <HomePageAsync/>
         },
         {
             path: "/contact",
