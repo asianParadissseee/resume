@@ -7,7 +7,9 @@ const BaseLayout = (props) => {
     return (
         <Fragment>
             <Navbar/>
-            {children}
+            <main className={"container"}>
+                {children}
+            </main>
             <Footer/>
         </Fragment>
     );
