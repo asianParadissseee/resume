@@ -6,11 +6,10 @@ export default defineConfig({
   source: {
     alias: (alias) => {
       return {
-        '@/atoms': './src/atoms',
-        '@/molecules': './src/molecules',
-        '@/organisms': './src/organisms',
-        '@/templates': './src/templates',
+        '@/components': './src/components',
+        '@/features': './src/features',
         '@/pages': './src/pages',
+        '@/layouts': './src/layouts',
         '@/app': './src/app',
         '@/commons': './src/commons'
       };
