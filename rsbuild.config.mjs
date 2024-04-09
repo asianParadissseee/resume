@@ -1,12 +1,6 @@
-import {defineConfig} from '@rsbuild/core';
-import {pluginReact} from '@rsbuild/plugin-react';
-import * as path from "path"
+import { defineConfig } from '@rsbuild/core';
+import { pluginReact } from '@rsbuild/plugin-react';
 
 export default defineConfig({
-    plugins: [pluginReact()],
-    source: {
-        alias: {
-            "@": path.resolve(__dirname, "./src")
-        }
-    }
+  plugins: [pluginReact()],
 });

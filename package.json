@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "my-project",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -8,15 +8,11 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "framer-motion": "^11.0.3",
-    "gsap": "^3.12.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3",
-    "scss": "^0.2.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "^0.3.9",
-    "@rsbuild/plugin-react": "^0.3.9"
+    "@rsbuild/core": "^0.5.9",
+    "@rsbuild/plugin-react": "^0.5.9"
   }
 }
