@@ -1,10 +1,10 @@
 import {RouterProvider} from "react-router-dom";
 import routerConfig from "../commons/config/router-config";
-import BaseLayout from "../layouts/base-layout";
+import {AnimatePresence} from "framer-motion";
 
 const App = () => {
     return (
-        <RouterProvider router={routerConfig}/>
+            <RouterProvider router={routerConfig}/>
     );
 };
 
