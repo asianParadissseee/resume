@@ -4,7 +4,7 @@ import BannerVideo from "@/commons/assets/videos/banner-video.mp4"
 const Banner = () => {
     return (
         <section id="home-banner" className="my-48 relative">
-            <div className="container mx-auto px-10 my-10">
+            <div className="container mx-auto px-10 mb-48">
                 <div
                     className="flex whitespace-pre text-3xl static sm:text-7xl lg:text-8xl text-gray-300 font-bold flex-col gap-2">
                     <h1>
