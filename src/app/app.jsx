@@ -1,11 +1,12 @@
+import BaseLayout from "@/layouts/base-layout";
 
 const App = () => {
     return (
-        <div>
+        <BaseLayout>
             <h1 className="text-red-500">
                 hello
             </h1>
-        </div>
+        </BaseLayout>
     );
 };
 

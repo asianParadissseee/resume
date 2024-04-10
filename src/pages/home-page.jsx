@@ -1,10 +1,10 @@
-import BaseLayout from "@/layouts/base-layout";
+import {Fragment} from "react";
 
 const HomePage = () => {
     return (
-        <BaseLayout>
+        <Fragment>
 
-        </BaseLayout>
+        </Fragment>
     );
 };
 
