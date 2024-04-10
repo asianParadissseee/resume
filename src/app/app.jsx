@@ -4,9 +4,7 @@ import BaseLayout from "../layouts/base-layout";
 
 const App = () => {
     return (
-        <BaseLayout>
-            <RouterProvider router={routerConfig}/>
-        </BaseLayout>
+        <RouterProvider router={routerConfig}/>
     );
 };
 
