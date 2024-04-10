@@ -9,10 +9,24 @@ const Banner = () => {
     useEffect(() => {
         const checkScroll = () => {
             if (videoRef.current && titlesRef.current) {
-                const videoPosition = videoRef.current.getBoundingClientRect().top;
-                const headerPosition = titlesRef.current.getBoundingClientRect().top;
+                const videoRect = videoRef.current.getBoundingClientRect();
+                const titlesRect = titlesRef.current.getBoundingClientRect();
+                const videoTop = videoRect.top;
+                const videoBottom = videoRect.bottom;
+                const titlesTop = titlesRect.top;
 
-                if (headerPosition <= videoPosition) {
+                if (titlesTop <= videoBottom) {
+                    titlesRef.current.classList.add('fixed');
+                    titlesRef.current.classList.add('block');
+                    titlesRef.current.classList.remove('hidden');
+                    titlesRef.current.classList.remove('static');
+                } else {
+                    titlesRef.current.classList.add('static');
+                    titlesRef.current.classList.add('hidden');
+                    titlesRef.current.classList.remove('block');
+                    titlesRef.current.classList.remove('fixed');
+                }
+                if (titlesTop <= videoTop) {
                     titlesRef.current.classList.add('text-gray-300');
                     titlesRef.current.classList.remove('text-red-300');
                 } else {
@@ -24,9 +38,9 @@ const Banner = () => {
 
         window.addEventListener('scroll', checkScroll);
 
-        // Очистка подписки на событие
         return () => window.removeEventListener('scroll', checkScroll);
     }, []);
+
 
     return (
         <section id="home-banner" className="my-48 relative">
