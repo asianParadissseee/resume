@@ -1,11 +1,10 @@
 import BaseLayout from "@/layouts/base-layout";
+import Banner from "@/components/home/banner";
 
 const HomePage = () => {
     return (
         <BaseLayout>
-            <h1 className="text-white">
-                Home
-            </h1>
+            <Banner/>
         </BaseLayout>
     );
 };
