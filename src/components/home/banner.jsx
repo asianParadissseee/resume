@@ -66,7 +66,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-96" ref={videoRef}>
+            <div className="mt-96 min-h-svh" ref={videoRef}>
                 <video autoPlay muted src={BannerVideo} loop className="w-full h-full object-cover"></video>
             </div>
         </section>
