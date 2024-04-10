@@ -1,7 +1,10 @@
 import {createBrowserRouter} from "react-router-dom";
-import HomePage from "@/pages/home-page";
-import AboutPage from "@/pages/about-page";
-import WorkPage from "@/pages/work-page";
+import {
+    WorkPage,
+    HomePage,
+    ContactsPage,
+    AboutPage
+} from "../const/lazy-page"
 import {
     getRouterAbout,
     getRouterContacts,
@@ -24,7 +27,7 @@ const routerConfig = createBrowserRouter([
     },
     {
         path: getRouterContacts(),
-        element: <AboutPage/>
+        element: <ContactsPage/>
     },
 ])
 export default routerConfig
