@@ -1,11 +1,12 @@
-const ContactsPage = () => {
+
+const WorkPage = () => {
     return (
         <div>
             <h1 className="text-white">
-                Contacts
+                work
             </h1>
         </div>
     );
 };
 
-export default ContactsPage;
+export default WorkPage;

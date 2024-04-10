@@ -1,7 +1,7 @@
 import {Fragment} from "react";
 import Navbar from "@/components/widgets/navbar";
-import Footer from "@/components/widgets/footer";
 import Sidebar from "@/components/widgets/sidebar";
+import Footer from "@/components/widgets/footer";
 
 const BaseLayout = ({children}) => {
     return (

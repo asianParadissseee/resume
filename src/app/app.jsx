@@ -1,11 +1,11 @@
-import BaseLayout from "@/layouts/base-layout";
+import {RouterProvider} from "react-router-dom";
+import routerConfig from "../commons/config/router-config";
+import BaseLayout from "../layouts/base-layout";
 
 const App = () => {
     return (
         <BaseLayout>
-            <h1 className="text-red-500">
-                hello
-            </h1>
+            <RouterProvider router={routerConfig}/>
         </BaseLayout>
     );
 };
