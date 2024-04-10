@@ -25,7 +25,7 @@ const Banner = () => {
                 </div>
             </div>
             <div>
-                <video autoPlay src={BannerVideo} loop className="w-full">
+                <video autoPlay  muted src={BannerVideo} loop className="w-full h-full object-cover">
                 </video>
             </div>
         </section>
