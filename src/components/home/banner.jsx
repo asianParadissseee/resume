@@ -3,7 +3,7 @@ import BannerVideo from "@/commons/assets/videos/banner-video.mp4"
 
 const Banner = () => {
     return (
-        <section id="home-banner" className="my-20 relative">
+        <section id="home-banner" className="my-48 relative">
             <div className="container mx-auto px-10 my-10">
                 <div
                     className="flex whitespace-pre text-3xl static sm:text-7xl lg:text-8xl text-gray-300 font-bold flex-col gap-2">
@@ -25,8 +25,7 @@ const Banner = () => {
                 </div>
             </div>
             <div>
-                <video autoPlay  muted src={BannerVideo} loop className="w-full h-full object-cover">
-                </video>
+                <video autoPlay  muted src={BannerVideo} loop className="w-full h-full object-cover"></video>
             </div>
         </section>
     );

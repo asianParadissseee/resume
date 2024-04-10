@@ -29,7 +29,7 @@ const Navbar = () => {
 
     return (
         <header id="navbar"
-                className={`fixed top-0 w-full z-30 transition-transform duration-300 ease-out ${visible ? 'translate-y-0' : '-translate-y-full'} flex items-center h-20`}>
+                className={`fixed top-0 w-full z-30 transition-transform duration-700 border-gray-200 border-b-2 ease-out ${visible ? 'translate-y-0' : '-translate-y-full'} flex items-center h-20`}>
             <div className="container mx-auto w-full px-10 flex justify-between items-center">
                 <div className="text-white">Logo</div>
                 <nav className="hidden md:block">
