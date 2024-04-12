@@ -11,7 +11,7 @@ const HomePage = () => {
             <Banner/>
             <TextBlock/>
             <ScrollText/>
-            {/*<HorizontalText/>*/}
+            <HorizontalText/>
             <WorkBlock/>
         </BaseLayout>
     );
