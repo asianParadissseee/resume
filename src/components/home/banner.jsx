@@ -1,53 +1,38 @@
 import TypewriterComponent from "typewriter-effect";
+import {motion} from "framer-motion";
 import BannerVideo from "@/commons/assets/videos/banner-video.mp4"
-import {useEffect, useRef} from "react";
 
 const Banner = () => {
 
-    const videoRef = useRef(null);
-    const titlesRef = useRef(null);
-    useEffect(() => {
-        const checkScroll = () => {
-            if (videoRef.current && titlesRef.current) {
-                const videoRect = videoRef.current.getBoundingClientRect();
-                const titlesRect = titlesRef.current.getBoundingClientRect();
-                const videoTop = videoRect.top;
-                const videoBottom = videoRect.bottom;
-                const titlesTop = titlesRect.top;
-
-                if (titlesTop <= videoBottom) {
-                    titlesRef.current.classList.add('fixed');
-                    titlesRef.current.classList.add('block');
-                    titlesRef.current.classList.remove('hidden');
-                    titlesRef.current.classList.remove('static');
-                } else {
-                    titlesRef.current.classList.add('static');
-                    titlesRef.current.classList.add('hidden');
-                    titlesRef.current.classList.remove('block');
-                    titlesRef.current.classList.remove('fixed');
-                }
-                if (titlesTop <= videoTop) {
-                    titlesRef.current.classList.add('text-gray-300');
-                    titlesRef.current.classList.remove('text-red-300');
-                } else {
-                    titlesRef.current.classList.add('text-red-300');
-                    titlesRef.current.classList.remove('text-gray-300');
-                }
-            }
-        };
-
-        window.addEventListener('scroll', checkScroll);
-
-        return () => window.removeEventListener('scroll', checkScroll);
-    }, []);
-
+    const variants = {
+        initial: {
+            clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)'
+        },
+        whileInView: {
+            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'
+        }
+    };
 
     return (
         <section id="home-banner" className="my-48 relative">
-            <div className="container mx-auto px-10 mb-48">
+            <div className="container mx-auto px-10">
                 <div
-                    className="flex whitespace-pre  text-3xl sm:text-7xl lg:text-8xl text-gray-300 font-bold flex-col gap-2">
-                    <div ref={titlesRef} className="fixed">
+                    className="flex whitespace-pre text-3xl sm:text-7xl lg:text-8xl text-gray-300 font-bold flex-col gap-2">
+                    <motion.div
+                        initial={{
+                            y: 20,
+                            opacity: 0,
+                            clipPath: variants.initial.clipPath
+                        }}
+                        whileInView={{
+                            y: 0,
+                            opacity: 1,
+                            clipPath: variants.whileInView.clipPath
+                        }}
+                        viewport={{
+                            once: true
+                        }}
+                        transition={{duration: 2, ease: 'easeInOut'}}>
                         <h1>
                             Hello everyone!
                         </h1>
@@ -63,11 +48,13 @@ const Banner = () => {
                                     loop: true
                                 }}/>
                         </h3>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-            <div className="mt-96 min-h-svh" ref={videoRef}>
-                <video autoPlay muted src={BannerVideo} loop className="w-full h-full object-cover"></video>
+            <div className="mt-36">
+                <video autoPlay muted playsInline loop className="w-full h-full object-cover">
+                    <source src={BannerVideo} type="video/mp4"/>
+                </video>
             </div>
         </section>
     );
