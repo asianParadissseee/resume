@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {getRouterAbout, getRouterContacts, getRouterWork} from "@/commons/const/router-path";
 import {useTheme} from "@/commons/hooks/use-theme";
-import {useMediaQuery} from "@/commons/hooks/use-media";
+import {useShowSidebar} from "@/commons/hooks/use-sidebar";
 import AppBurger from "../ui/app-burger";
 import AppLogo from "../ui/app-logo";
 
@@ -10,7 +10,7 @@ const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const {handleThemeSwitch, theme} = useTheme()
-    const isMobile = useMediaQuery("(max-width: 768px)")
+    const {isShowSidebar, handleShowSidebar} = useShowSidebar()
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
         const isScrollingUp = prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70;
@@ -26,19 +26,19 @@ const Navbar = () => {
     }, [prevScrollPos, visible]);
 
     const links = [
-        {link: "Work", path: getRouterWork},
-        {link: "About", path: getRouterAbout},
-        {link: "Contact", path: getRouterContacts},
+        {link: "Work", path: getRouterWork()},
+        {link: "About", path: getRouterAbout()},
+        {link: "Contact", path: getRouterContacts()},
     ];
 
 
     return (
         <header id="navbar"
-                className={`fixed top-0 w-full z-30 transition-transform duration-700 border-y-zinc-800 dark:border-gray-200 border-b-2 ease-out ${visible ? 'translate-y-0' : '-translate-y-full'} flex items-center h-20`}>
+                className={`fixed top-0 w-full z-40 transition-transform duration-700 border-y-zinc-800 dark:border-gray-200 border-b-2 ease-out ${visible ? 'translate-y-0' : '-translate-y-full'} flex items-center h-20`}>
             <div className="container mx-auto w-full px-10 flex justify-between items-center">
                 <AppLogo/>
                 <nav className="hidden md:block">
-                    <ul className="flex gap-10 items-center">
+                    <ul className="flex gap-10 py-10 items-center">
                         {links.map((link) => (
                             <li key={link.path}>
                                 <Link to={link.path}
@@ -50,7 +50,7 @@ const Navbar = () => {
                         </button>
                     </ul>
                 </nav>
-                <div className="block md:hidden">
+                <div className="block md:hidden" onClick={handleShowSidebar}>
                     <AppBurger/>
                 </div>
             </div>

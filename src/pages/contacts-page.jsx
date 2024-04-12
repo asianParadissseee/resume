@@ -1,10 +1,11 @@
+import BaseLayout from "@/layouts/base-layout";
+import ContactForm from "@/components/contacts/contact-form";
+
 const ContactsPage = () => {
     return (
-        <div>
-            <h1 className="text-white">
-                Contacts
-            </h1>
-        </div>
+        <BaseLayout>
+            <ContactForm/>
+        </BaseLayout>
     );
 };
 
