@@ -11,7 +11,7 @@ const ContactForm = () => {
                 Contact <br/>
                 <span className="text-right">me</span>
             </motion.h1>
-            <form className="flex flex-col gap-5 w-4/5 md:w-2/4 -z-40">
+            <form className="flex flex-col gap-5 w-4/5 md:w-2/4">
                 <input type="text" placeholder={"Name"}
                        className="h-14 p-4 w-full rounded dark:bg-zinc-800 dark:text-white  placeholder:text-white bg-gray-300 text-zinc-800 outline-0"/>
                 <input type="text" placeholder={"Phone number"}
