@@ -9,7 +9,7 @@ const AppBurger = () => {
     };
 
     return (
-        <ol className="text-white w-4 list-disc cursor-pointer" onClick={handleClick}>
+        <ol className="text-zinc-800 dark:text-white w-4 list-disc cursor-pointer" onClick={handleClick}>
             <motion.li
                 animate={{opacity: isMenu ? 0.6 : 1, transition: {duration: 0.5}}}
             >

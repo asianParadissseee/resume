@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {getRouterAbout, getRouterContacts, getRouterWork} from "@/commons/const/router-path";
 import {useTheme} from "@/commons/hooks/use-theme";
+import {useMediaQuery} from "@/commons/hooks/use-media";
 import AppBurger from "../ui/app-burger";
 import AppLogo from "../ui/app-logo";
 
@@ -9,6 +10,7 @@ const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const {handleThemeSwitch, theme} = useTheme()
+    const isMobile = useMediaQuery("(max-width: 768px)")
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
         const isScrollingUp = prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70;
@@ -28,6 +30,7 @@ const Navbar = () => {
         {link: "About", path: getRouterAbout},
         {link: "Contact", path: getRouterContacts},
     ];
+
 
     return (
         <header id="navbar"
