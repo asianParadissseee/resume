@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getRouterAbout, getRouterContacts, getRouterWork} from "@/commons/const/router-path";
 import AppBurger from "../ui/app-burger";
+import AppLogo from "../ui/app-logo";
 
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -31,7 +32,7 @@ const Navbar = () => {
         <header id="navbar"
                 className={`fixed top-0 w-full z-30 transition-transform duration-700 border-gray-200 border-b-2 ease-out ${visible ? 'translate-y-0' : '-translate-y-full'} flex items-center h-20`}>
             <div className="container mx-auto w-full px-10 flex justify-between items-center">
-                <div className="text-white">Logo</div>
+                <AppLogo/>
                 <nav className="hidden md:block">
                     <ul className="flex gap-10 items-center">
                         {links.map((link) => (

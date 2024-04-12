@@ -1,7 +1,7 @@
 import TypewriterComponent from "typewriter-effect";
 import { motion } from "framer-motion";
 import BannerVideo from "@/commons/assets/videos/banner-video.mp4";
-import { useAnimatedClipPath } from "../../commons/hooks/use-clippath";
+import { useAnimatedClipPath } from "@/commons/hooks/use-clippath";
 
 const Banner = () => {
     const { motionProps, ref } = useAnimatedClipPath();
