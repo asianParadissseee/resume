@@ -1,13 +1,14 @@
+import { useEffect, useState} from "react";
 import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
 import {getRouterAbout, getRouterContacts, getRouterWork} from "@/commons/const/router-path";
+import {useTheme} from "@/commons/hooks/use-theme";
 import AppBurger from "../ui/app-burger";
 import AppLogo from "../ui/app-logo";
 
 const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
-
+    const {handleThemeSwitch} = useTheme()
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
         const isScrollingUp = prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70;
@@ -37,9 +38,12 @@ const Navbar = () => {
                     <ul className="flex gap-10 items-center">
                         {links.map((link) => (
                             <li key={link.path}>
-                                <Link to={link.path} className="text-white">{link.link}</Link>
+                                <Link to={link.path} className="text-black dark:text-white font-bold text-base">{link.link}</Link>
                             </li>
                         ))}
+                        <button onClick={handleThemeSwitch} className="text-black dark:text-white">
+theme
+                        </button>
                     </ul>
                 </nav>
                 <div className="block md:hidden">
