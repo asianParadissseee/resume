@@ -30,15 +30,34 @@ const Sidebar = () => {
                             height: 0,
                             opacity: 0
                         }}
-                        transition={{ease: 'easeOut', duration: 1.4}}
+                        transition={{ease: 'easeOut', duration: 1.9}}
                         className="block md:hidden fixed top-0 bottom-0 z-30 w-screen h-svh bg-black dark:bg-white">
                         <div className="container mx-auto px-10">
                             <ul className="flex flex-col justify-center mt-32 items-start gap-10">
                                 {links.map((link, id) => (
-                                        <li key={id} onClick={handleShowSidebar}>
-                                            <Link to={link.path}
-                                                  className="dark:text-black text-white font-normal text-4xl">{link.link}</Link>
-                                        </li>
+                                        <motion.li
+                                            initial={{
+                                                opacity: 0,
+                                                x: 50
+                                            }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                x: 0
+                                            }}
+                                            exit={{
+                                                x: 50,
+                                                opacity: 0
+                                            }}
+                                            transition={{ease: 'easeOut', duration: 0.3, delay: id * 0.3}}
+                                            key={id} onClick={handleShowSidebar}>
+                                            {isShowSidebar && (
+                                                <Link to={link.path}
+                                                      className="dark:text-black text-white font-normal text-4xl">
+                                                    {link.link}
+                                                </Link>
+                                            )}
+
+                                        </motion.li>
                                     )
                                 )
                                 }
