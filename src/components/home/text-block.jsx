@@ -1,8 +1,10 @@
 import {useEffect, useRef, useState} from "react";
+import {useTheme} from "@/commons/hooks/use-theme";
 
 const TextBlock = () => {
     const textRef = useRef(null);
     const [scrollPosition, setScrollPosition] = useState(0);
+    const {theme} = useTheme()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -31,7 +33,7 @@ const TextBlock = () => {
     };
 
     return (
-        <div className="mx-auto container flex flex-col gap-20 px-10">
+        <div className="mx-auto container flex flex-col gap-20 mt-96 min-h-svh px-10">
             <h4 className="text-xl sm:text-3xl lg:text-5xl xl:text-7xl">
                 {colorizedText(
                     "Helping brands to stand out in the digital era through a human centered design approach to turn ideas into interactive experiences."

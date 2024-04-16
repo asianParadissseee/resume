@@ -27,14 +27,14 @@ const HorizontalText = () => {
     const bottomX = useTransform(scrollYProgress, [0, 1], [0, -endRange]);
 
     return (
-        <div className="container mx-auto px-10">
+        <div className="hidden xl:block container mt-20 mx-auto px-10">
             <motion.p
-                className={`text-white transition-all ease-in-expo duration-300 sm:text-9xl z-10 m-0 whitespace-nowrap`}
+                className={`text-white overflow-hidden transition-all ease-in-expo duration-300 sm:text-9xl z-10 m-0 whitespace-nowrap`}
                 style={{x: topX}}>
                 Creating
             </motion.p>
             <motion.p
-                className={`text-white transition-all ease-in-expo duration-300 sm:text-9xl z-10 m-0 whitespace-nowrap`}
+                className={`text-white transition-all overflow-hidden ease-in-expo duration-300 sm:text-9xl z-10 m-0 whitespace-nowrap`}
                 style={{x: bottomX}}>
                 Digital Beauty
             </motion.p>

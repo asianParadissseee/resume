@@ -37,7 +37,7 @@ function ParallaxText({children, baseVelocity = 100}) {
         baseX.set(baseX.get() + moveBy);
     });
 
-    const words = Array.from({length: 4})
+    const words = Array.from({length: 10})
     return (
         <div className="parallax overflow-hidden tracking-tighter m-0 whitespace-nowrap">
             <motion.div className="font-bold uppercase text-5xl flex whitespace-nowrap flex-nowrap" style={{x}}>
