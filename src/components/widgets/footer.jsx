@@ -23,19 +23,19 @@ const Footer = () => {
     const social = [
         {
             name: "Linkedin",
-            path: ""
+            path: "https://kg.linkedin.com/in/dauren-abasov-91b3a5243?trk=people_directory"
         },
         {
             name: "Telegram",
-            path: ""
+            path: "https://t.me/dadash_i"
         },
         {
             name: "Instagram",
-            path: ""
+            path: "https://www.instagram.com/daurenkx/"
         },
         {
             name: "Github",
-            path: "http://github.com/asianParadissseee/"
+            path: "https://github.com/asianParadissseee/"
         }
     ]
 
@@ -51,7 +51,7 @@ const Footer = () => {
                             <ul className="grid grid-cols-2 gap-5">
                                 {
                                     useful.map((link) => (
-                                        <Link to={link.path} className="text-zinc-600 dark:text-gray-300"
+                                        <Link to={link.path}  className="text-zinc-600 dark:text-gray-300"
                                               key={link.path}>
                                             {link.name}
                                         </Link>
