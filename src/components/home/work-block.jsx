@@ -1,6 +1,9 @@
 import ParallaxText from "../ui/parallax-text";
 
 const WorkBlock = () => {
+    const blocks = [
+        
+    ]
     return (
         <section className="min-h-svh mt-96">
             <ParallaxText baseVelocity={4}>
@@ -14,6 +17,7 @@ const WorkBlock = () => {
                 </p>
             </ParallaxText>
             <div className="container mx-auto px-10">
+
 
             </div>
         </section>

@@ -49,10 +49,10 @@ const Loader = () => {
                            variants={boxVariants}
                 >
                     {counter.map((el, id) => (
-                        <motion.li key={id} className="text-9xl text-zinc-800  leading-40 h-40 text-center"
+                        <motion.li key={id} className="text-8xl text-zinc-800 font-semibold  leading-40 h-40 text-center"
                                    variants={itemVariants}
                         >
-                            {el}
+                            {el.toUpperCase()}
                         </motion.li>
                     ))}
                 </motion.ul>

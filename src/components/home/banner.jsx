@@ -34,9 +34,9 @@ const Banner = () => {
                 </div>
             </div>
             <div className="mt-36">
-                <video autoPlay muted playsInline loop className="w-full h-full object-cover">
+                <motion.video {...motionProps} autoPlay muted playsInline loop className="w-full h-full object-cover">
                     <source src={BannerVideo} type="video/mp4"/>
-                </video>
+                </motion.video>
             </div>
         </section>
     );
