@@ -42,8 +42,8 @@ function ParallaxText({children, baseVelocity = 100}) {
         <div className="parallax overflow-hidden tracking-tighter m-0 whitespace-nowrap">
             <motion.div className="font-bold uppercase text-5xl flex whitespace-nowrap flex-nowrap" style={{x}}>
                 {
-                    words.map((word) => (
-                        <span key={word} className="block mr-70">{children}</span>
+                    words.map((word,id) => (
+                        <span key={id} className="block mr-70">{children}</span>
                     ))
                 }
             </motion.div>
