@@ -3,7 +3,7 @@ import {useAnimatedClipPath} from "@/commons/hooks/use-clippath";
 
 const Helping = () => {
 
-    const { motionProps, ref } = useAnimatedClipPath();
+    const {motionProps, ref} = useAnimatedClipPath();
 
 
     const blocks = [
@@ -24,7 +24,7 @@ const Helping = () => {
     return (
         <section className="my-36">
             <div ref={ref} className="container mx-auto px-10">
-                <motion.h2 {...motionProps} className="text-5xl text-zinc-800 dark:text-gray-300">
+                <motion.h2 {...motionProps} className="text-3xl sm:text-5xl font-bold text-zinc-800 dark:text-gray-300">
                     I can help you with...
                 </motion.h2>
             </div>
