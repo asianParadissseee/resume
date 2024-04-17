@@ -1,12 +1,9 @@
 import React from 'react';
 import {TagSphere} from "react-tag-sphere";
-import {motion} from "framer-motion";
-import {useAnimatedClipPath} from "@/commons/hooks/use-clippath";
-import {useMediaQuery} from "../../commons/hooks/use-media";
+import {useMediaQuery} from "@/commons/hooks/use-media";
 
 const Stack = () => {
-    const {motionProps, ref} = useAnimatedClipPath();
-    const isMobile = useMediaQuery("max-width: 640px")
+    const isMobile = useMediaQuery("(max-width: 640px)")
     const tags = [
         'HTML',
         'CSS',
@@ -43,19 +40,32 @@ const Stack = () => {
     ];
 
     return (
-        <section ref={ref} className="my-36">
-            <motion.h3 {...motionProps}
+        <section className="my-36">
+            <h3
                        className="text-zinc-800 text-3xl sm:text-5xl font-bold whitespace-nowrap gap-10 dark:text-gray-300 text-center">
                 My Stack Technology
-            </motion.h3>
+            </h3>
             <div className="container mx-auto mt-40 w-80 md:w-96 md:min-w-96 px-10 flex justify-between items-center">
-                <TagSphere
-                    className="text-zinc-800 dark:hover:text-white hover:text-black dark:text-gray-300"
-                    fullHeight
-                    fullWidth
-                    tags={tags}
-                    radius={200}
-                />
+                {
+                    isMobile ?
+                        (
+                            <TagSphere
+                                className="text-zinc-800 dark:hover:text-white text-lg hover:text-black dark:text-gray-300"
+                                fullHeight={true}
+                                fullWidth={true}
+                                tags={tags}
+                                radius={170}
+                            />
+                        ) : (
+                            <TagSphere
+                                className="text-zinc-800 dark:hover:text-white text-lg hover:text-black dark:text-gray-300"
+                                fullHeight
+                                fullWidth
+                                tags={tags}
+                                radius={400}
+                            />
+                        )
+                }
             </div>
         </section>
     );
