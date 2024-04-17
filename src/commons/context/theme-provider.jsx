@@ -1,9 +1,12 @@
-import React, {createContext, useEffect, useState} from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
-export const ThemeContext = createContext(null)
-const ThemeProvider = ({children}) => {
+export const ThemeContext = createContext(null);
 
-    const [theme, setTheme] = useState("dark")
+const ThemeProvider = ({ children }) => {
+    const [theme, setTheme] = useState(() => {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme || "dark";
+    });
 
     useEffect(() => {
         if (theme === "dark") {
@@ -13,6 +16,8 @@ const ThemeProvider = ({children}) => {
             document.body.classList.remove('dark');
             document.body.classList.add('light');
         }
+        localStorage.setItem('theme', theme);
+
         return () => {
             document.body.classList.remove('dark');
             document.body.classList.remove('light');
@@ -20,10 +25,13 @@ const ThemeProvider = ({children}) => {
     }, [theme]);
 
     const handleThemeSwitch = () => {
-        setTheme(theme === "light" ? "dark" : "light")
-    }
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+    };
+
     return (
-        <ThemeContext.Provider value={{handleThemeSwitch,theme}}>
+        <ThemeContext.Provider value={{ handleThemeSwitch, theme }}>
             {children}
         </ThemeContext.Provider>
     );

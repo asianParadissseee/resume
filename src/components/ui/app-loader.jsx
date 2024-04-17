@@ -34,7 +34,7 @@ const Loader = () => {
 
     return (
         <motion.div
-            className="fixed w-screen h-screen inset-0 bg-white text-white flex items-center justify-center"
+            className="fixed w-screen h-screen inset-0 bg-black  dark:bg-white flex items-center justify-center"
             variants={loaderVariants}
             initial="initial"
             animate="animate"
@@ -42,14 +42,14 @@ const Loader = () => {
             <motion.div className="relative w-full h-20 overflow-hidden mx-auto"
                         variants={boxVariants}
             >
-                <motion.span className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-white to-transparent"/>
-                <motion.span className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t from-white to-transparent"/>
+                <motion.span className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-black dark:from-white to-transparent"/>
+                <motion.span className="absolute inset-x-0 bottom-0 h-4 bg-gradient-to-t  from-black dark:from-white to-transparent"/>
 
                 <motion.ul className="m-0 p-0 list-none"
                            variants={boxVariants}
                 >
                     {counter.map((el, id) => (
-                        <motion.li key={id} className="text-8xl text-zinc-800 font-semibold  leading-40 h-40 text-center"
+                        <motion.li key={id} className="text-8xl text-gray-300  dark:text-zinc-800 font-semibold  leading-40 h-40 text-center"
                                    variants={itemVariants}
                         >
                             {el.toUpperCase()}
