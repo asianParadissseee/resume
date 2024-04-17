@@ -2,6 +2,12 @@ import {useCallback, useState} from "react";
 import Kili from "@/commons/assets/images/kili-img.png"
 import Adrasteai from "@/commons/assets/images/adrasteai-img.png"
 import Royal from "@/commons/assets/images/royal-img.png"
+import BekElectro from "@/commons/assets/images/bekelectro-img.png"
+import Cahtad from "@/commons/assets/images/cahtad-img.png"
+import Gsr from "@/commons/assets/images/gsr-img.png"
+import Loop from "@/commons/assets/images/loop-img.png"
+import Miraculum from "@/commons/assets/images/miraculum-img.png"
+import Room from "@/commons/assets/images/room-img.png"
 import CardLine from "./card-line";
 import Card from "./card";
 import SortBlock from "./sort-block";
@@ -44,24 +50,24 @@ const WorkList = () => {
             bgColor: "bg-gray-300",
             textColor: "text-zinc-800",
             href: "https://app-landing-rose.vercel.app/",
-            imgUrl: ""
+            imgUrl: Miraculum
         },
         {
             name: "BekElectro",
             description: "Construction online store",
             stack: "Vue, Typescript, Pinia, Tailwindcss",
             status: false,
-            bgColor: "bg-gray-600",
+            bgColor: "bg-gray-900",
             textColor: "text-gray-300",
             href: "https://b-crm.vercel.app/",
-            imgUrl: ""
+            imgUrl: BekElectro
         },
         {
             name: "kili",
             description: "Kili is your reliable partner in the world of information technologies, leading IT provider,",
             stack: "Html, Javascript, Tailwindcss",
             status: true,
-            bgColor: "bg-gray-400",
+            bgColor: "bg-gray-600",
             textColor: "text-zinc-800",
             href: "https://kili.kg",
             imgUrl: Kili
@@ -74,27 +80,27 @@ const WorkList = () => {
             bgColor: "bg-gray-300",
             textColor: "text-zinc-800",
             href: "https://loop-school.vercel.app/",
-            imgUrl: ""
+            imgUrl: Loop
         },
         {
             name: "GSR Group",
             description: "GSR Group is a group of companies providing services in the field logistics, consulting and brokerage",
             stack: "Html, Javascript, Tailwindcss",
             status: true,
-            bgColor: "bg-gray-300",
-            textColor: "text-zinc-800",
+            bgColor: "bg-gray-900",
+            textColor: "text-gray-300",
             href: "https://gsrgroup-auto.vercel.app/",
-            imgUrl: ""
+            imgUrl: Gsr
         },
         {
             name: "Room",
             description: "We've developed a series of purpose-built rooms that offer companies looking for change an affordable",
             stack: "Vue, Typescript, Tailwindcss",
             status: true,
-            bgColor: "bg-gray-300",
+            bgColor: "bg-gray-600",
             textColor: "text-zinc-800",
             href: "https://main--design-room.netlify.app/",
-            imgUrl: ""
+            imgUrl: Room
         },
         {
             name: "C.A.H.T.A.D",
@@ -104,7 +110,7 @@ const WorkList = () => {
             bgColor: "bg-gray-300",
             textColor: "text-zinc-800",
             href: "https://cahtad-c6bde.web.app/",
-            imgUrl: ""
+            imgUrl: Cahtad
         }
     ];
 
