@@ -41,27 +41,64 @@ const WorkList = () => {
             href: "https://kili.kg",
             imgUrl: Kili
         },
+        {
+            name: "IT-Loop",
+            stack: "Nuxt, SSR, Typescript, Tailwindcss",
+            bgColor: "bg-gray-300",
+            textColor: "text-zinc-800",
+            href: "https://loop-school.vercel.app/",
+            imgUrl: ""
+        },
+        {
+            name: "GSR Group",
+            stack: "Html, Javascript, Tailwindcss",
+            bgColor: "bg-gray-300",
+            textColor: "text-zinc-800",
+            href: "https://gsrgroup-auto.vercel.app/",
+            imgUrl: ""
+        },
+        {
+            name: "Room",
+            stack: "Vue, Typescript, Tailwindcss",
+            bgColor: "bg-gray-300",
+            textColor: "text-zinc-800",
+            href: "https://main--design-room.netlify.app/",
+            imgUrl: ""
+        },
+        {
+            name: "C.A.H.T.A.D",
+            stack: "Html, Javascript, Php",
+            bgColor: "bg-gray-300",
+            textColor: "text-zinc-800",
+            href: "https://cahtad-c6bde.web.app/",
+            imgUrl: ""
+        }
     ];
 
 
     return (
         <section className="my-20">
             <div className="container mx-auto px-10">
-                <div className="flex-row flex justify-items-end gap-10 items-center">
-                    <div className="rounded-full w-14 h-14 bg-gray-300 flex flex-col gap-1 justify-center items-center"
-                         onClick={handleSortBlocks}>
+                <div className="flex-row flex justify-end gap-10 items-center">
+                    <div
+                        className={`rounded-full w-14 h-14 ${isLine ? " bg-gray-300" : "bg-zinc-800"} flex flex-col gap-1 justify-center items-center`}
+                        onClick={handleSortBlocks}>
                         {
                             sortLines.map((line, id) => (
-                                <span className="w-6 h-0.5 bg-zinc-800" key={id}></span>
+                                <span className={`w-6 h-0.5 ${!isLine ? "bg-gray-300" : "bg-zinc-800"}`}
+                                      key={id}></span>
                             ))
                         }
                     </div>
-                    <div className={`rounded-full w-14 h-14 bg-gray-300 flex justify-center items-center`}
-                         onClick={handleSortBlocks}>
+                    <div
+                        className={`rounded-full w-14 h-14 ${!isLine ? " bg-gray-300" : "bg-zinc-800"}  flex justify-center items-center`}
+                        onClick={handleSortBlocks}>
                         <div className="w-5 h-5 grid grid-cols-2 gap-0.5 place-items-center">
                             {
                                 sortBlocks.map((line, id) => (
-                                    <span className="w-2 h-2 bg-transparent border border-zinc-800" key={id}></span>
+                                    <span
+                                        className={`w-2 h-2 ${isLine ? "border-gray-300" : "border-zinc-800"} bg-transparent  border `}
+                                        key={id}></span>
                                 ))
                             }
                         </div>
