@@ -1,5 +1,4 @@
-
-const SortBlock = ({isLine, sortLines, sortBlocks,handleSortBlocks }) => {
+const SortBlock = ({isLine, sortLines, sortBlocks, handleSortBlocks}) => {
     return (
         <div className="flex-row hidden sm:flex justify-end gap-10 items-center">
             <div

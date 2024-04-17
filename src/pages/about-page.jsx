@@ -1,9 +1,10 @@
 import BaseLayout from "@/layouts/base-layout";
+import BannerAbout from "../components/about/banner-about";
 
 const AboutPage = () => {
     return (
         <BaseLayout>
-            <h1 className="text-white">About </h1>
+            <BannerAbout/>
         </BaseLayout>
     );
 };
