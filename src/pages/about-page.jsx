@@ -1,8 +1,10 @@
+import BaseLayout from "@/layouts/base-layout";
+
 const AboutPage = () => {
     return (
-        <div>
+        <BaseLayout>
             <h1 className="text-white">About </h1>
-        </div>
+        </BaseLayout>
     );
 };
 
