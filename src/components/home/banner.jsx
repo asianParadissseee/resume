@@ -8,7 +8,7 @@ const Banner = () => {
 
     return (
         <section id="home-banner" className="my-48 relative">
-            <div className="container mx-auto px-10">
+            <div  className="container mx-auto px-10">
                 <div
                     className="flex whitespace-pre text-3xl sm:text-7xl lg:text-8xl text-zinc-800 dark:text-gray-300 font-bold flex-col gap-2"
                     ref={ref}
