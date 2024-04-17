@@ -43,4 +43,3 @@ const HorizontalText = () => {
 };
 
 export default HorizontalText
-//                className={`text-white transition-all ease-in-expo duration-300 text-9xl sm:text-[16.313rem] z-10 m-0 whitespace-nowrap`}
