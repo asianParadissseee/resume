@@ -9,10 +9,10 @@ const Sidebar = () => {
     const {handleThemeSwitch, theme} = useTheme()
     const {handleShowSidebar, isShowSidebar} = useShowSidebar()
     const links = [
-        {link: "Home", path: getRouterHome},
-        {link: "Work", path: getRouterWork},
-        {link: "About", path: getRouterAbout},
-        {link: "Contact", path: getRouterContacts},
+        {link: "Home", path: getRouterHome()},
+        {link: "Work", path: getRouterWork()},
+        {link: "About", path: getRouterAbout()},
+        {link: "Contact", path: getRouterContacts()},
     ];
     return (
         <AnimatePresence>
