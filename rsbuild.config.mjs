@@ -3,6 +3,9 @@ import { pluginReact } from '@rsbuild/plugin-react';
 
 export default defineConfig({
   plugins: [pluginReact()],
+  html: {
+    title: "Dadashi portfolio",
+  },
   source: {
     alias: (alias) => {
       return {
