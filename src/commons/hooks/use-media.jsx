@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 
 /**
  * Используйте этот хук для определения, соответствует ли текущее разрешение экрана указанному CSS медиа-запросу.

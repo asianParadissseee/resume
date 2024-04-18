@@ -5,7 +5,7 @@ export const SidebarContext = createContext(null)
 const SidebarProvider = ({children}) => {
     const [isShowSidebar, setIsShowSidebar] = useState(false)
 
-    const handleShowSidebar = ()=> {
+    const handleShowSidebar = () => {
         setIsShowSidebar(!isShowSidebar)
     }
 

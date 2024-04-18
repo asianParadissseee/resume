@@ -7,7 +7,7 @@ import Footer from "@/components/widgets/footer";
 import AppTooltip from "@/components/ui/app-tooltip";
 import {useTheme} from "@/commons/hooks/use-theme";
 import AppCursor from "@/components/ui/app-cursor";
-import {useMediaQuery} from "../commons/hooks/use-media";
+import {useMediaQuery} from "@/commons/hooks/use-media";
 
 const BaseLayout = ({children}) => {
     const {handleThemeSwitch, theme} = useTheme()

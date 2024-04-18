@@ -1,20 +1,19 @@
-import {Fragment, useRef} from "react";
+import {Fragment, useCallback} from "react";
 import ParallaxText from "../ui/parallax-text";
-import {useScroll} from "framer-motion";
 import {useNavigate} from "react-router-dom";
 import WorkCard from "../ui/work-card";
 import {getRouterWork} from "../../commons/const/router-path";
 import Kili from "@/commons/assets/images/kili-img.png"
 import Adrasteai from "@/commons/assets/images/adrasteai-img.png"
 import Royal from "@/commons/assets/images/royal-img.png"
+import AppButton from "../ui/app-button";
 
 const WorkBlock = () => {
     const navigate = useNavigate()
-    const container = useRef(null);
-    const {scrollYProgress} = useScroll({
-        target: container,
-        offset: ['start start', 'end end']
-    })
+    const handleSeeProjects = useCallback(() => {
+        navigate(getRouterWork())
+    }, [])
+
     const blocks = [
         {
             name: "Royal",
@@ -58,13 +57,10 @@ const WorkBlock = () => {
                 ))}
             </div>
             <div className="flex justify-center items-center my-60">
-                <button
-                    onClick={() => navigate(getRouterWork())}
-                    className="px-12 py-4 bg-transparent border hover:bg-zinc-800 hover:text-gray-300
-                     dark:hover:text-zinc-800 dark:hover:bg-gray-300 transition duration-500 rounded-full
-                     dark:text-white text-zinc-800 dark:border-gray-300 border-black">
+                <AppButton
+                    onClick={handleSeeProjects}>
                     See all projects
-                </button>
+                </AppButton>
             </div>
         </section>
     );

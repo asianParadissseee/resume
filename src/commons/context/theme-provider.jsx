@@ -1,8 +1,8 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 
 export const ThemeContext = createContext(null);
 
-const ThemeProvider = ({ children }) => {
+const ThemeProvider = ({children}) => {
     const [theme, setTheme] = useState(() => {
         const savedTheme = localStorage.getItem('theme');
         return savedTheme || "dark";
@@ -31,7 +31,7 @@ const ThemeProvider = ({ children }) => {
     };
 
     return (
-        <ThemeContext.Provider value={{ handleThemeSwitch, theme }}>
+        <ThemeContext.Provider value={{handleThemeSwitch, theme}}>
             {children}
         </ThemeContext.Provider>
     );

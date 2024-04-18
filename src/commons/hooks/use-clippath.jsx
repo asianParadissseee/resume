@@ -1,7 +1,7 @@
 import {useInView} from "react-intersection-observer";
 
 export const useAnimatedClipPath = () => {
-    const { ref, inView } = useInView({ triggerOnce: true });
+    const {ref, inView} = useInView({triggerOnce: true});
 
     const variants = {
         initial: {
@@ -19,8 +19,8 @@ export const useAnimatedClipPath = () => {
     const motionProps = {
         initial: variants.initial,
         animate: inView ? variants.whileInView : variants.initial,
-        transition: { duration: 2, ease: 'easeInOut' }
+        transition: {duration: 2, ease: 'easeInOut'}
     };
 
-    return { motionProps, ref };
+    return {motionProps, ref};
 };
