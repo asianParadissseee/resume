@@ -5,7 +5,7 @@ const AppButton = ({onClick, children, ...otherProps}) => {
         <button
             onClick={onClick}
             {...otherProps}
-            className="px-12 py-4 bg-transparent border hover:bg-zinc-800 hover:text-gray-300
+            className="px-12 py-4 outline-0 bg-transparent border hover:bg-zinc-800 hover:text-gray-300
                      dark:hover:text-zinc-800 dark:hover:bg-gray-300 transition duration-500 rounded-full
                      dark:text-white text-zinc-800 dark:border-gray-300 border-black">
             {children}
