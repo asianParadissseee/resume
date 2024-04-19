@@ -1,10 +1,15 @@
 import {motion} from "framer-motion";
+import {useCallback} from "react";
 
 const CardLine = ({name, stack, description, href}) => {
 
+    const handleClick = useCallback(() => {
+        window.location.href = href
+    }, [])
 
     return (
         <motion.div
+            onClick={handleClick}
             whileHover={{
                 scale: 1.05,
                 transition: {duration: 0.7},
