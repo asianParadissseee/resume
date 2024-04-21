@@ -6,7 +6,7 @@ const DownloadButton = () => {
 
     const handleDownload = useCallback(() => {
         const link = document.createElement("a");
-        link.href = "../../commons/assets/pdf/resume.pdf";
+        link.href = "@/commons/assets/pdf/resume.pdf";
         link.download = "Resume.pdf";
         document.body.appendChild(link);
         link.click();
