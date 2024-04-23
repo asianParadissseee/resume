@@ -14,7 +14,7 @@ const Alert = (props) => {
                 right: 12,
             }}
             transition={{ease: 'easeOut', duration: 1}}
-            className={`absolute z-50 right-3 top-20 sm:-top-20 rounded px-3.5 py-1.5 font-bold dark:bg-white bg-zinc-800 dark:text-zinc-800 text-gray-300 `}>
+            className={`absolute z-50 right-3 top-40 sm:-top-20 rounded px-3.5 py-1.5 font-bold dark:bg-white bg-zinc-800 dark:text-zinc-800 text-gray-300 `}>
             {isSuccess ?
                 (<p>Сообщение успешно <br/> отправлено</p>)
                 :
