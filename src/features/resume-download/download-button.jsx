@@ -6,8 +6,9 @@ const DownloadButton = () => {
 
     const handleDownload = useCallback(() => {
         const link = document.createElement("a");
-        link.href = "@/commons/assets/pdf/resume.pdf";
+        link.href = 'https://drive.google.com/file/d/11wdYnWngy85VlWhl_dopyeQrQaiJhPFH/view';
         link.download = "Resume.pdf";
+        link.target = "_blank"
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -16,7 +17,7 @@ const DownloadButton = () => {
 
     return (
         <AppButton onClick={handleDownload}>
-                Download Resume
+            Download Resume
         </AppButton>
     );
 };
