@@ -1,5 +1,4 @@
 import AppButton from "@/components/ui/app-button";
-import Resume from "@/commons/assets/pdf/resume.pdf"
 import {useCallback} from "react";
 
 const DownloadButton = () => {
