@@ -7,7 +7,7 @@ import Cahtad from "@/commons/assets/images/cahtad-img.png"
 import Gsr from "@/commons/assets/images/gsr-img.png"
 import Loop from "@/commons/assets/images/loop-img.png"
 import Miraculum from "@/commons/assets/images/miraculum-img.png"
-import Room from "@/commons/assets/images/room-img.png"
+import Montech from "@/commons/assets/images/montech.png"
 import CardLine from "./card-line";
 import Card from "./card";
 import SortBlock from "./sort-block";
@@ -93,14 +93,14 @@ const WorkList = () => {
             imgUrl: Gsr
         },
         {
-            name: "Room",
-            description: "We've developed a series of purpose-built rooms that offer companies looking for change an affordable",
-            stack: "Vue, Typescript, Tailwindcss",
+            name: "Montech",
+            description: "Компания специализируется на продаже высококачественных маршрутизаторов и серверов.",
+            stack: "Html, Javascript, Tailwindcss",
             status: true,
             bgColor: "bg-gray-600",
             textColor: "text-zinc-800",
-            href: "https://main--design-room.netlify.app/",
-            imgUrl: Room
+            href: "https://www.montech.kg/",
+            imgUrl: Montech
         },
         {
             name: "C.A.H.T.A.D",
